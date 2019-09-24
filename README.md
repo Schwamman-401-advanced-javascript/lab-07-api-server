@@ -1,46 +1,51 @@
 # LAB - 07
 
-## Project Name
+## LAB: Express
 
-### Author: Student/Group Name
+### Author: Jonathon Schwamman, Calvin Hall, Jacob Swenson
 
 ### Links and Resources
-* [submission PR](http://xyz.com)
-* [travis](http://xyz.com)
-* [back-end](http://xyz.com) (when applicable)
-* [front-end](http://xyz.com) (when applicable)
+* [submission PR](https://github.com/Schwamman-401-advanced-javascript/lab-07-api-server/pull/1)
+* [travis](https://www.travis-ci.com/Schwamman-401-advanced-javascript/lab-07-api-server)
 
 #### Documentation
-* [api docs](http://xyz.com) (API servers)
 * [jsdoc](http://xyz.com) (Server assignments)
-* [styleguide](http://xyz.com) (React assignments)
 
 ### Modules
-#### `modulename.js`
+#### `category-routes.js`
 ##### Exported Values and Methods
 
-###### `foo(thing) -> string`
-Usage Notes or examples
+###### `postCategory()`
+Returns an object containing all categories
 
-###### `bar(array) -> array`
-Usage Notes or examples
+###### `getCategory()`
+Creates a new category and adds to database
+
+#### `server.js`
+###### `start(port) -> number`
+Starts server on passed in port
+
+###### `app`
+The express serverr
 
 ### Setup
+* npm install
 #### `.env` requirements
-* `PORT` - Port Number
-* `MONGODB_URI` - URL to the running mongo instance/db
+* `PORT` - 3002
+
 
 #### Running the app
 * `npm start`
-* Endpoint: `/foo/bar/`
-  * Returns a JSON object with abc in it.
-* Endpoint: `/bing/zing/`
-  * Returns a JSON object with xyz in it.
+* Endpoint: `/category/`
+  * GET: Returns an object containing all categories
+  `{"count":1,"results":[{"name":"Blues Clues","id":0.17811889454571106,"valid":true}]}`
+  * POST: Creates a new category and adds to database
   
 #### Tests
 * How do you run tests?
+`npm test`
 * What assertions were made?
 * What assertions need to be / should be made?
 
 #### UML
-Link to an image of the UML for your application and response to events
+* [whiteboard](./docs/whiteboards_lab07.jpg)
